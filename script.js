@@ -1,10 +1,11 @@
-// Typing effect
+// Text animation variables for the typing effect
 const texts = ['Web Developer', 'Designer', 'Freelancer'];
 let count = 0;
 let index = 0;
 let currentText = '';
 let letter = '';
 
+// Creates a typing animation effect for the hero section text
 function type() {
     if (count === texts.length) {
         count = 0;
@@ -22,10 +23,10 @@ function type() {
     }
 }
 
-// Start typing effect when page loads
+// Start typing animation when page loads
 window.onload = type;
 
-// Smooth scrolling for navigation links
+// Enable smooth scrolling for all navigation links that point to page sections
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -35,27 +36,27 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Mobile menu variables
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 const navLinksItems = document.querySelectorAll('.nav-link');
 
+// Toggle mobile menu when hamburger icon is clicked
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     navLinks.classList.toggle('active');
     
-    // Update aria-expanded attribute
     const isExpanded = hamburger.classList.contains('active');
     hamburger.setAttribute('aria-expanded', isExpanded);
 });
 
-// Close menu when clicking a link
+// Close mobile menu when a navigation link is clicked and scroll to section
 navLinksItems.forEach(link => {
     link.addEventListener('click', () => {
         hamburger.classList.remove('active');
         navLinks.classList.remove('active');
         hamburger.setAttribute('aria-expanded', 'false');
         
-        // Smooth scroll to section
         const targetId = link.getAttribute('href');
         const targetSection = document.querySelector(targetId);
         if (targetSection) {
@@ -64,7 +65,7 @@ navLinksItems.forEach(link => {
     });
 });
 
-// Close menu when clicking outside
+// Close mobile menu when clicking outside of it
 document.addEventListener('click', (e) => {
     if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
         hamburger.classList.remove('active');
@@ -73,23 +74,22 @@ document.addEventListener('click', (e) => {
     }
 });
 
+// Handle contact form submission and show success message
 document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
     alert('Message sent successfully!');
     this.reset();
 });
 
+// Theme toggle functionality
 const themeToggle = document.querySelector('.theme-toggle');
 const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
 
-// Check for saved theme preference or use system preference
+// Load saved theme preference or use system preference
 const currentTheme = localStorage.getItem('theme') || 
                     (prefersDarkScheme.matches ? 'dark' : 'light');
 
-// Set initial theme
-document.documentElement.setAttribute('data-theme', currentTheme);
-updateThemeIcon(currentTheme);
-
+// Switch between light and dark themes when toggle button is clicked
 themeToggle.addEventListener('click', () => {
     document.body.classList.toggle('light-mode');
     const icon = themeToggle.querySelector('i');
@@ -100,6 +100,7 @@ themeToggle.addEventListener('click', () => {
     }
 });
 
+// Update theme icon based on current theme
 function updateThemeIcon(theme) {
     const icon = themeToggle.querySelector('i');
     if (theme === 'light') {
@@ -109,16 +110,13 @@ function updateThemeIcon(theme) {
     }
 }
 
-// No JavaScript needed for the rotating animation as it's now handled by CSS
-
+// Position technology icons in a circular pattern
 document.addEventListener('DOMContentLoaded', function() {
     const techIcons = document.querySelectorAll('.tech-icon');
     
     techIcons.forEach((icon, index) => {
-        // Calculate angle for even distribution
         const angle = (index * 45) % 360; // 360/8 = 45 degrees between each icon
         
-        // Position each icon - reduced to 55px to overlap with profile
         icon.style.transform = `
             rotate(${angle}deg) 
             translateX(55px) 
@@ -127,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Scroll animation for timeline cards
+// Add animation to timeline cards when they become visible
 document.addEventListener('DOMContentLoaded', function() {
     const cards = document.querySelectorAll('.timeline-card');
     
@@ -146,25 +144,30 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Multi-step form variables
 let currentStep = 'name';
 const steps = ['name', 'email', 'message'];
 
+// Validate email format using regex
 function validateEmail(email) {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(email);
 }
 
+// Display error message for form fields
 function showError(stepId, message) {
     const errorElement = document.getElementById(`${stepId}Error`);
     errorElement.textContent = message;
     errorElement.style.display = 'block';
 }
 
+// Hide error message for form fields
 function hideError(stepId) {
     const errorElement = document.getElementById(`${stepId}Error`);
     errorElement.style.display = 'none';
 }
 
+// Update progress dots in multi-step form
 function updateDots(stepIndex) {
     const dots = document.querySelectorAll('.dot');
     dots.forEach((dot, index) => {
@@ -172,6 +175,7 @@ function updateDots(stepIndex) {
     });
 }
 
+// Move to next step in form after validation
 function nextStep(currentStepId) {
     const currentInput = document.getElementById(`${currentStepId}Input`);
     
@@ -196,6 +200,7 @@ function nextStep(currentStepId) {
     }
 }
 
+// Move to previous step in form
 function prevStep(currentStepId) {
     const currentIndex = steps.indexOf(currentStepId);
     if (currentIndex > 0) {
@@ -206,6 +211,7 @@ function prevStep(currentStepId) {
     }
 }
 
+// Handle form submission and send email
 function submitForm() {
     const name = document.getElementById('nameInput').value;
     const email = document.getElementById('emailInput').value;
@@ -216,31 +222,27 @@ function submitForm() {
         return;
     }
 
-    // Create mailto link
     const mailtoLink = `mailto:jmukunzindahiro@gmail.com?subject=Contact from ${name}&body=${encodeURIComponent(
         `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
     )}`;
 
-    // Open default email client
     window.location.href = mailtoLink;
 
-    // Reset form
     document.getElementById('contactForm').reset();
     document.getElementById('messageStep').classList.remove('active');
     document.getElementById('nameStep').classList.add('active');
     currentStep = 'name';
     updateDots(0);
 
-    // Show success message (you can customize this)
     alert('Thank you for your message! Your email client should open to send the email.');
 }
 
+// Validate name input in real-time
 function handleNameInput() {
     const nameInput = document.getElementById('nameInput');
     const nameNextBtn = document.getElementById('nameNextBtn');
     const nameError = document.getElementById('nameError');
     
-    // Enable next button if name has at least 2 characters
     if (nameInput.value.trim().length >= 2) {
         nameNextBtn.disabled = false;
         nameError.style.display = 'none';
@@ -250,6 +252,7 @@ function handleNameInput() {
     }
 }
 
+// Validate email input in real-time
 function handleEmailInput() {
     const emailInput = document.getElementById('emailInput');
     const emailNextBtn = document.getElementById('emailNextBtn');
@@ -270,10 +273,10 @@ function handleEmailInput() {
     }
 }
 
-// Update the email step HTML to include onkeyup
+// Add email input validation listener
 document.getElementById('emailInput').addEventListener('keyup', handleEmailInput);
 
-// Update the message step validation
+// Validate message input in real-time
 function handleMessageInput() {
     const messageInput = document.getElementById('messageInput');
     const submitBtn = document.getElementById('submitBtn');
@@ -289,10 +292,10 @@ function handleMessageInput() {
     }
 }
 
-// Add this to your email step HTML
+// Add message input validation listener
 document.getElementById('messageInput').addEventListener('keyup', handleMessageInput);
 
-// Update active nav link based on scroll position
+// Update active navigation link based on scroll position
 function updateActiveNavLink() {
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-links a');
@@ -315,10 +318,10 @@ function updateActiveNavLink() {
     });
 }
 
-// Add scroll event listener
+// Add scroll event listener to update active navigation link
 window.addEventListener('scroll', updateActiveNavLink);
 
-// Add smooth scrolling to nav links
+// Add smooth scrolling to navigation links
 document.querySelectorAll('.nav-links a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -328,7 +331,7 @@ document.querySelectorAll('.nav-links a').forEach(anchor => {
     });
 });
 
-// Set home as active by default when page loads
+// Set home link as active when page loads
 window.addEventListener('load', () => {
     document.querySelector('.nav-links a[href="#home"]').classList.add('active');
 });
