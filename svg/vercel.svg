@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+  <rect x="0" y="0" width="200" height="100" fill="#000000"/>
+  <polygon points="100,20 140,80 60,80" fill="#FF00D6"/>
+  <text x="50" y="90" font-family="Arial" font-size="24" fill="#FFFFFF">Vercel</text>
+</svg>

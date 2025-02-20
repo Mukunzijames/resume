@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar fixed-nav glass-gradient" role="navigation" aria-label="main navigation">
+        <button class="hamburger" aria-label="Menu" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+        </ul>
+        <button class="theme-toggle" aria-label="Toggle dark mode">
+            <i class="fas fa-moon"></i>
+        </button>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="profile-container">
+                <div class="profile-image">
+                    <img src="/images/LANE0202.jpg" alt="Profile picture" class="animated-profile">
+                </div>
+                <div class="profile-glow"></div>
+            </div>
+            <h1>Hi, I'm <span class="gradient-text">Mukunzi Ndahiro James</span></h1>
+            <p class="subtitle">senior software Engineer with 5+ years of experience, using AI to level up dev efficiency and cut down the grind</p>
+            <div class="social-links">
+                <a href="https://wa.me/250788270273" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://github.com/Mukunzijames" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/mukunzi-ndahiro-james-1b96a5292/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:jmukunzindahiro@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+    <section id="creative-work" class="creative-work">
+        <div class="stars"></div>
+        <div class="moon"></div>
+        
+        <div class="content">
+            <h2>Creative Work</h2>
+            <p class="section-subtitle">Bringing ideas to life through innovative design and seamless interactions</p>
+            
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="service-icon blue">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="service-text">
+                        <h3>Interactive UI</h3>
+                        <p>Creating engaging user interfaces with smooth animations and transitions</p>
+                    </div>
+                    <div class="underline blue"></div>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-icon purple">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <div class="service-text">
+                        <h3>Creative Design</h3>
+                        <p>Implementing unique and creative design solutions with modern aesthetics</p>
+                    </div>
+                    <div class="underline purple"></div>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-icon green">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <div class="service-text">
+                        <h3>Animations</h3>
+                        <p>Bringing websites to life with captivating animations and effects</p>
+                    </div>
+                    <div class="underline green"></div>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-icon orange">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <div class="service-text">
+                        <h3>Responsive</h3>
+                        <p>Building fully responsive websites that work seamlessly across all devices</p>
+                    </div>
+                    <div class="underline orange"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="tools-and-ai-stack" class="tools-stack dark-bg">
+        <div class="content">
+            <h2 class="white-text">Tools & AI Stack</h2>
+            <p class="section-subtitle white-text">Leveraging cutting-edge tools and AI to supercharge development workflow</p>
+            
+            <div class="stack-grid">
+                <div class="stack-category card dark-card">
+                    <h3><i class="fas fa-database"></i> Database & Storage</h3>
+                    <div class="tools-container">
+                        <div class="tool-item">
+                            <img src="svg/superbase.svg" alt="Supabase">
+                            <span>Supabase</span>
+                        </div>
+                        <div class="tool-item">
+                            <img src="svg/firebase.svg" alt="Firebase">
+                            <span>Firebase</span>
+                        </div>
+                        <div class="tool-item">
+                            <img src="svg/mongodb.svg" alt="MongoDB">
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stack-category card dark-card">
+                    <h3><i class="fas fa-robot"></i> Automation</h3>
+                    <div class="tools-container">
+                        <div class="tool-item">
+                            <img src="svg/neon.svg" alt="n8n">
+                            <span>n8n</span>
+                        </div>
+                        <div class="tool-item">
+                            <img src="svg/circle.svg" alt="Circle CI">
+                            <span>Circle CI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stack-category card dark-card">
+                    <h3><i class="fas fa-brain"></i> AI Tools</h3>
+                    <div class="tools-container">
+                        <div class="tool-item">
+                            <img src="svg/cursor.svg" alt="Cursor IDE">
+                            <span>Cursor IDE</span>
+                        </div>
+                        <div class="tool-item">
+                            <img src="svg/chat.svg" alt="ChatGPT">
+                            <span>ChatGPT</span>
+                        </div>
+                        <div class="tool-item">
+                            <img src="svg/claude.svg" alt="Claude">
+                            <span>Claude</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stack-category card dark-card">
+                    <h3><i class="fas fa-server"></i> Infrastructure</h3>
+                    <div class="tools-container">
+                        <div class="tool-item">
+                            <img src="svg/aws.svg" alt="AWS">
+                            <span>AWS</span>
+                        </div>
+                        <div class="tool-item">
+                            <img src="svg/vercel.svg" alt="Vercel">
+                            <span>Vercel</span>
+                        </div>
+                        <div class="tool-item">
+                            <img src="svg/groq.svg" alt="Groq">
+                            <span>Groq</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stack-category card dark-card">
+                    <h3><i class="fas fa-comments"></i> Communication</h3>
+                    <div class="tools-container">
+                        <div class="tool-item">
+                            <img src="svg/slack.svg" alt="Slack">
+                            <span>Slack</span>
+                        </div>
+                        <div class="tool-item">
+                            <img src="svg/discord.svg" alt="Discord">
+                            <span>Discord</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projects" class="projects-section">
+        <div class="content">
+            <h2>Featured Projects</h2>
+            <p class="section-subtitle">Explore some of my recent work and personal projects</p>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-preview">
+                        <img src="images/Screenshot 2025-02-20 132213.png" alt="Llama GPT Project Preview">
+                    </div>
+                    <div class="project-info">
+                        <h3>Health connect </h3>
+                        <p>AI-powered health management system</p>
+                        <div class="tech-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">AI</span>
+                            <span class="tag">Tailwind</span>
+                        </div>
+                        <a href="https://www.health-connect.com/" class="visit-project">Visit Project <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-preview">
+                        <img src="images/Screenshot 2025-02-20 132939.png" alt="URL Shortener Project Preview">
+                    </div>
+                    <div class="project-info">
+                        <h3>Beekeeper management system</h3>
+                        <p>AI-powered beekeeper management system</p>
+                        <div class="tech-tags">
+                            <span class="tag">Next.js</span>
+                            <span class="tag">NeonDB</span>
+                            <span class="tag">API</span>
+                            <span class="tag">Hasura</span>
+                        </div>
+                        <a href="https://bee-keeping-management.vercel.app/" class="visit-project">Visit Project <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-preview">
+                        <img src="images/Screenshot 2025-02-20 133717.png" alt="Portfolio Project Preview">
+                    </div>
+                    <div class="project-info">
+                        <h3>Gura Africa</h3>
+                        <p>E-commerce website for Gura Africa</p>
+                        <div class="tech-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">Tailwind</span>
+                        </div>
+                        <a href="https://gurafrica.com/rwanda/" class="visit-project">Visit Project <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="experience" class="experience-section">
+        <div class="content">
+            <h2>My Journey</h2>
+            <p class="section-subtitle">Education and Work Experience</p>
+            
+            <div class="timeline">
+                <!-- Experience 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <h3>Senior software Engineer</h3>
+                        <p class="company">seven X </p>
+                        <p class="date">2024 - Present</p>
+                        <p class="description">developing and maintaining software applications using neondb, nextjs, tailwindcss, typescript, and react, hasura</p>
+                        <div class="tags">
+                            <span>React</span>
+                            <span>TypeScript</span>
+                            <span>AWS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <h3>Full stack Engineer</h3>
+                        <p class="company">Ared Group Inc.</p>
+                        <p class="date">2025 - Present</p>
+                        <p class="description">developing and maintaining software applications using mysql , django, tailwindcss,typecript,go,vue js</p>
+                        <div class="tags">
+                            <span>vue js</span>
+                            <span>django</span>
+                            <span>mysql</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <h3>Full Stack Developer</h3>
+                        <p class="company">Augmented reality</p>
+                        <p class="date">2021 - 2022</p>
+                        <p class="description">Built scalable web applications from scratch using modern technologies like c# , unity, vuforia, and arcore</p>
+                        <div class="tags">
+                            <span>c#</span>
+                            <span>unity</span>
+                            <span>vuforia</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <h3>Frontend Developer</h3>
+                        <p class="company">Andela</p>
+                        <p class="date">2021 - 2022</p>
+                        <p class="description">Developed responsive web e-commerce interfaces and implemented UI/UX designs</p>
+                        <div class="tags">
+                            <span>react</span>
+                            <span>node js</span>
+                            <span>postgres</span>
+                        </div>
+                    </div>
+                </div>
+                <!--education-->
+                <div class="timeline-item education">
+                    <div class="timeline-card">
+                        <h3>Bachelor  of software engineering</h3>
+                        <p class="date">2023 - 2026</p>
+                        <p class="description">Studied software engineering with a focus on web development and software engineering</p>
+                        <div class="tags">
+                            <span>Data Structures</span>
+                            <span>Algorithms</span>
+                            <span>Web Development</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact-section">
+        <div class="content">
+            <h2 class="connect-title">Let's Connect<span class="wave">👋</span></h2>
+            <p class="connect-subtitle">Choose your preferred way to reach out</p>
+            
+            <div class="contact-container">
+                <div class="contact-info-wrapper">
+                    <div class="contact-card info-card glass-gradient">
+                        <h3>Contact Information</h3>
+                        <div class="contact-info">
+                            <div class="info-row">
+                                <div class="info-item glass">
+                                    <i class="fas fa-envelope"></i>
+                                    <div class="info-content">
+                                        <span class="label">Email</span>
+                                        <span class="value">jmukunzindahiro@gmail.com</span>
+                                    </div>
+                                </div>
+                                <div class="info-item glass">
+                                    <i class="fas fa-phone"></i>
+                                    <div class="info-content">
+                                        <span class="label">Phone</span>
+                                        <span class="value">+250788270273</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-item glass">
+                                    <i class="fas fa-location-dot"></i>
+                                    <div class="info-content">
+                                        <span class="label">Location</span>
+                                        <span class="value">Kigali, Rwanda</span>
+                                    </div>
+                                </div>
+                                <div class="info-item glass">
+                                    <i class="far fa-calendar"></i>
+                                    <div class="info-content">
+                                        <span class="label">Calendly</span>
+                                        <span class="value">Schedule a meeting</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-card form-card glass-gradient">
+                    <form id="contactForm" onsubmit="return false;">
+                        <!-- Step 1: Name -->
+                        <div class="form-step active" id="nameStep">
+                            <h3>What's your name?</h3>
+                            <input 
+                                type="text" 
+                                id="nameInput" 
+                                placeholder="Enter your name" 
+                                class="name-input glass-input" 
+                                onkeyup="handleNameInput()"
+                                required
+                            >
+                            <div class="error-message" id="nameError">Please enter your name</div>
+                            <div class="form-navigation">
+                                <div></div>
+                                <button class="next-btn glass-button" onclick="nextStep('name')" id="nameNextBtn" disabled>Next</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Email -->
+                        <div class="form-step" id="emailStep">
+                            <h3>What's your email?</h3>
+                            <input 
+                                type="email" 
+                                id="emailInput" 
+                                placeholder="Enter your email" 
+                                class="email-input glass-input" 
+                                onkeyup="handleEmailInput()"
+                                required
+                            >
+                            <div class="error-message" id="emailError">Please enter your email</div>
+                            <div class="form-navigation">
+                                <button class="prev-btn glass-button" onclick="prevStep('email')">Back</button>
+                                <button class="next-btn glass-button" onclick="nextStep('email')" id="emailNextBtn" disabled>Next</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Message -->
+                        <div class="form-step" id="messageStep">
+                            <h3>Your Message</h3>
+                            <textarea 
+                                id="messageInput" 
+                                placeholder="Type your message here..." 
+                                class="message-input glass-input" 
+                                onkeyup="handleMessageInput()"
+                                required
+                            ></textarea>
+                            <div class="error-message" id="messageError">Please enter your message</div>
+                            <div class="form-navigation">
+                                <button class="prev-btn glass-button" onclick="prevStep('message')">Back</button>
+                                <button class="submit-btn glass-button" onclick="submitForm()" id="submitBtn" disabled>Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                    
+                    <div class="progress-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer glass-gradient">
+        <div class="footer-content">
+            <div class="copyright">
+                © 2025 Mukunzi Ndahiro James. All rights reserved.
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/Mukunzijames" class="social-link" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/mukunzi-ndahiro-james-1b96a5292/" class="social-link" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:jmukunzindahiro@gmail.com" class="social-link" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="images/Mukunzi Ndahiro James cv (1).pdf" class="social-link" aria-label="Resume">
+                    <i class="fas fa-file-alt"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

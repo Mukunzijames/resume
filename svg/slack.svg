@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+  <rect x="0" y="0" width="200" height="100" fill="#4A154B"/>
+  <circle cx="50" cy="50" r="30" fill="#E01563"/>
+  <circle cx="100" cy="50" r="30" fill="#2B6A90"/>
+  <circle cx="50" cy="50" r="15" fill="#61A756"/>
+  <circle cx="100" cy="50" r="15" fill="#D69C16"/>
+  <text x="120" y="60" font-family="Arial" font-size="30" fill="#FFFFFF">Slack</text>
+</svg>
